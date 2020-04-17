@@ -1,14 +1,13 @@
 #language: go 
 matrix:
   include:
-    - env: ENV=bionic
+    - env: ENV=bionic-power-LXD
       dist: bionic
       arch: ppc64le
-    - env: ENV=xenial
+    - env: ENV=xenial-power-LXD
       dist: xenial
       arch: ppc64le
-    - env: ENV=xenial_legacy_power_queue
-      dist: xenial
+    - env: ENV=xenial_power-VM
       os: linux-ppc64le
 
 addons:
