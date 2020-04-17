@@ -11,18 +11,18 @@ matrix:
       dist: xenial
       os: linux-ppc64le
 
-#addons:
-#  postgresql: "10"
-#  apt:
-#    packages:
-#    - postgresql-10
-#    - postgresql-client-10
+addons:
+  postgresql: "10"
+  apt:
+    packages:
+    - postgresql-10
+    - postgresql-client-10
 services:
   - postgresql
 
 script:
   - psql -V
-  - dpkg -l | grep postgre
-  - ps aux | grep postgre
+  # - dpkg -l | grep postgre
+  # - ps aux | grep postgre
   #- psql -c 'create database travis_ci_test;' -U postgres
   #- mysql -e 'CREATE DATABASE myapp_test;'
